@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  background-color: indianred;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/****************   Nav Section **********************/
+nav {
+  background-color: red;
+  color: black;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/***********************  Footer Section   **************************/
+footer {
+  background-color: red;
+  color: black;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #303030;
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-family: "Epunda slab", serif;
+  color: #CD5C5C;
+}
+
+header img {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 15px;
+  border-color: gray;
+}
+
+.address {
+  font-family: "Epunda slab", serif;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.tagline {
+  font-family: "Epunda slab", serif;
+  font-size: 1.5em;
+  padding: 0 1em;
+}
+
+/************* Sections ********************/
+hr {
+  color: black;
+}
+
+/* Instructions saidto modify h3 but headings are h2 according to html cv instructions */
+section h2 {
+  font-family: "Epunda slab", serif;
+  color: #303030;
+}
+
+section h3 {
+  font-family: "Epunda slab", serif;
+  color: #303030;
+}
+
+section dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 1em;
+}
+
+section ul {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+section a {
+  color: gold;
+  text-decoration: none;
+}
+
+section a:hover {
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+/**************   Projects   *****************/
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 2px solid #303030;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card ul {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.one-col form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.one-col label {
+  font-weight: bold;
+  font-family: "Epunda slab", serif;
+  color: #303030;
+}
+
+input {
+  padding: 0.75rem;
+  border: 2px solid #303030;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  padding: 0.75rem;
+  border: 2px solid #303030;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: #303030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: "Epunda slab", serif;
+}
+
+button:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  nav p {
+    margin: 0.5rem 0;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section dl {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .one-col {
+    padding: 1rem;
+  }
+}
