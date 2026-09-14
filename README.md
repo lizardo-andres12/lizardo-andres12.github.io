@@ -1,48 +1,60 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/lPo0jEug)
-# CSS Resume Assignment
+# lizardo-andres12.github.io
 
-In this assignment, you will style a resume website using CSS. 
+My personal portfolio site — background, experience, and projects, plus a place to track progress on coursework
+(currently CS2340 at Georgia Tech).
 
----
+Live at: https://lizardo-andres12.github.io
 
-## Provided Files
+## Structure
 
-- `style.css`: a template css file linked in index.html and contact.html 
-- `index.html`: a template shell with css file linked
-- `contact.html`: a template shell with css file linked
+- `index.html` — homepage (experience, projects, education, skills)
+- `contact.html` — contact page and message form
+- `css/style.css` — all styling
+- `images/` — headshot and other image assets
+- `.tests/` — Jest test scripts from an earlier course assignment; kept for reference, not required for the site to run
 
----
-## Part 1: Project Setup
+## Running locally
 
-- Copy the contents of your completed `index.html` from the html assignment into the provided `index.html` template. (Keep the link to style.css.)
-- Copy the contents of your completed `contact.html` from the html assignment into the provided `contact.html` template file. (Keep the link to style.css.)
-- Copy the images from your completed html project to the images folder
+This is a static site with no build step, so you have a couple of options:
 
-## Part 2: Create!
+1. **Open directly**
 
-Style your cv following these [step-by-step instructions](https://docs.google.com/document/d/1_Zpam8eycWh1wazH-_V9HGNCaHtEF6mf9KnPqqevdew/edit?usp=sharing). (20 pts)
+   Double-click `index.html` (or `contact.html`) to open it in your browser. Good enough for quick visual checks.
 
-### Part 3: Testing locally
+2. **Serve it locally** (recommended, since it matches how GitHub Pages serves the site)
 
-After you have completed the style.css file.  You may run the test scripts locally by:
+   With Python 3:
 
-1. Install the tools by running:
+   ```bash
+   python3 -m http.server 8000
+   ```
 
-   `npm install`
+   Or with Node, using the `serve` package:
 
-2. Run the test scripts:
-   
-   `npm test`
+   ```bash
+   npx serve .
+   ```
 
-3. Repeat `npm test` until all tests are passed.
+   Then visit `http://localhost:8000` in your browser.
 
-### 🧭 Part 4: Publish your cv on your personal GitHub pages
+## Making changes
 
-1. **Publish your CV on GitHub pages **
+Edit `index.html`, `contact.html`, and `css/style.css` directly, then refresh the browser tab to see the change —
+there's no build/compile step. If you're using the local server option above, refresh manually to see updates
+(no live-reload).
 
-You are to publish your CV to your own GitHub pages site. This is **NOT** your classroom repo created in our CSCI4300-Web-Programming organization. [instructions](https://docs.google.com/document/d/1_Zpam8eycWh1wazH-_V9HGNCaHtEF6mf9KnPqqevdew/edit?usp=sharing) for publishing on GitHub are linked.
+## Deploying
 
-2. **Provide the link on the class Google sheet** 
+Pushes to `main` deploy automatically via GitHub Pages. Give it a minute or two after pushing, then check
+https://lizardo-andres12.github.io.
 
-The link to the Google sheet is provided in the instructions sheet linked above.
+## Optional: legacy test scripts
 
+The `.tests/` directory holds Jest tests written for an earlier class assignment that graded specific CSS/HTML
+patterns (grid layout, flex nav, hover states, etc.). They're not required for the site to work, but if you want to
+run them:
+
+```bash
+npm install
+npm test
+```

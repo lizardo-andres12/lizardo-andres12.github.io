@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2340 &mdash; Lizardo Hernandez</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <p>Lizardo Hernandez</p>
+        <div class="nav-links">
+            <p><a href="index.html">About</a></p>
+            <p><a href="cs2340.html">CS2340</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+    </nav>
+
+    <!-- page header -->
+    <header style="padding-bottom: 1rem;">
+        <div class="hero-text">
+            <p class="eyebrow">Georgia Tech</p>
+            <h1>CS2340</h1>
+        </div>
+    </header>
+    <p class="tagline" style="margin-top: 0;">
+        A running log for my CS2340 project, including what it is, how I built it, and a video walkthrough.
+    </p>
+
+    <hr>
+
+    <!-- project description -->
+    <section id="description">
+        <h2>Project Description</h2>
+        <p>
+            GT Movies Store is a full-stack movie e-commerce app: users browse a catalog, add movies to a cart,
+            check out, leave and moderate reviews, and track past orders. Below is how each of the 21 user stories
+            shows up in the actual pages. Click on any of the images below to enlarge.
+        </p>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-homepage.png"><img src="images/ms-homepage.png" alt="Movies Store homepage with hero banner"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Stories 1, 15</p>
+                <h3>Homepage</h3>
+                <p>
+                    The landing page introduces the store and its purpose (story 1), and is reachable from any
+                    desktop browser with no install required (story 15). The whole app is a standard
+                    server-rendered site.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-about.png"><img src="images/ms-about.png" alt="About page describing the Movies Store platform"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 1</p>
+                <h3>About page</h3>
+                <p>
+                    A dedicated About explaining what the catalog offers and how users can rent/buy what they want.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-signup.png"><img src="images/ms-signup.png" alt="Sign up form with username, password, and confirmation"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 2</p>
+                <h3>Sign up</h3>
+                <p>
+                    New users register with a username, password, and password confirmation, creating the account
+                    needed to place orders, leave reviews, and report reviews.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-login.png"><img src="images/ms-login.png" alt="Login form with username and password"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 3</p>
+                <h3>Login</h3>
+                <p>
+                    Registered users log in with their credentials to place new orders, view past orders, and interact 
+                    with the review system.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-movies.png"><img src="images/ms-movies.png" alt="List of movies with a search bar and movie cards"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Stories 4, 5</p>
+                <h3>Movie list &amp; search</h3>
+                <p>
+                    The Movies page lists every title in the catalog as a card (story 4), and the search bar at the
+                    top filters that list by title (story 5).
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-movie.png"><img src="images/ms-movie.png" alt="Movie detail page for Avatar with reviews and an add-to-cart control, viewed by the review author"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Stories 7, 8, 10, 11, 12, 13</p>
+                <h3>Movie details &amp; reviews</h3>
+                <p>
+                    Users can add one or more copies of the movie to their cart (story 7). Users can also add a new review 
+                    and modify/delete existing reviews that the user has uploaded (stories 8, 10, &amp; 11). All reviews 
+                    are under the movie description, aiding users in their purchasing decision (stories 12 &amp; 13).
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-report.png"><img src="images/ms-report.png" alt="Same movie detail page viewed by a different user, showing a Report button on each review instead of Edit or Delete"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 21</p>
+                <h3>Reporting reviews</h3>
+                <p>
+                    On a review the user didn't write, the Edit/Delete controls are replaced with a "Report" button, so
+                    logged-in users may report inappropriate/offensive reviews and stop the review from bein displayed for all users.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-cart.png"><img src="images/ms-cart.png" alt="Shopping cart table with total to pay, purchase, and remove-all buttons"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Stories 6, 9</p>
+                <h3>Shopping cart</h3>
+                <p>
+                    The Cart page lists every movie a user has added, with quantity and running total (story 6),
+                    and a "Remove all movies from Cart" button clears it in one action when they change their mind
+                    about a whole order (story 9).
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-orders.png"><img src="images/ms-orders.png" alt="My Orders page listing past orders with items, prices, and quantities"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 14</p>
+                <h3>Order history</h3>
+                <p>
+                    Once a cart is purchased, it becomes an order on the My Orders page, so users can look back at
+                    what they've bought and what they spent.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-viewport.png"><img src="images/ms-viewport.png" alt="Top navigation bar showing About, Movies, Cart, Orders, and Logout links"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Story 16</p>
+                <h3>Responsive navigation</h3>
+                <p>
+                    The same navbar (About, Movies, Cart, Orders, account controls) renders across every page and
+                    adapts to the viewport, so the layout holds up on different screen sizes rather than just
+                    desktop.
+                </p>
+            </div>
+        </div>
+
+        <div class="story-block">
+            <figure>
+                <a href="images/ms-admin.png"><img src="images/ms-admin.png" alt="Admin panel showing create, read, update, delete power over Movies, Reviews, Orders, Users, and more"></a>
+            </figure>
+            <div class="story-text">
+                <p class="story-tag">Stories 17, 18, 19, 20</p>
+                <h3>Responsive navigation</h3>
+                <p>
+                    The moviesstore admin panel allows administrators to manually modify, create, and delete all site models. 
+                    This includes Users, Movies, Reviews, and Orders (stories 17, 18, 19, &amp; 20).
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- work process -->
+    <section id="process">
+        <h2>Work Process</h2>
+        <p class="story-text">
+            This project was built by following the book "Django 5 for the Impatient" by Dr. Daniel Correa and Mr. Greg Lim. 
+            It took about 5 hours of work, all done in Python 3.12 and HTML5. Upon any doubts, I avoided using AI tools to solve my 
+            problem, and instead used resources like GeeksforGeeks, Official Django documentation, and Stack Overflow (OG).
+        </p>
+        <p class="story-text">
+            I learned a lot about the model-view-template server paradigm, and I am curious now to learn how Django itself works under the hood.
+        </p>
+    </section>
+
+    <!-- video demo -->
+    <section id="demo">
+        <h2>Video Demo</h2>
+        <div class="video-wrap">
+            <!-- Replace the src below with your demo video's embed URL (e.g. a YouTube "embed" link) -->
+            <iframe src="videos/ms-demo.mp4" title="CS2340 project demo" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy;
+        <a href="contact.html">Lizardo Hernandez</a>
+        <a href="https://www.linkedin.com/in/lizardo-a-hern/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/lizardo-andres12" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
+</body>
+
+</html>

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lizardo Hernandez</title>
+    <meta name="description" content="Lizardo Hernandez — software engineer focused on performance engineering, low-latency systems, and quantitative trading infrastructure.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 </head>
 
@@ -18,116 +19,254 @@
     <!-- navbar -->
     <nav>
         <p>Lizardo Hernandez</p>
-        <p><a href="contact.html">Contact Lizardo Hernandez</a></p>
+        <div class="nav-links">
+            <p><a href="index.html">About</a></p>
+            <p><a href="cs2340.html">CS2340</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
     </nav>
 
     <!-- image and metadata -->
     <header>
-        <h1>Lizardo Hernandez</h1>
-        <img src="images/headshot.jpg" alt="Lizardo's professional headshot" height="300" width="300">
+        <div class="hero-text">
+            <p class="eyebrow">Software Engineer</p>
+            <h1>Lizardo Hernandez</h1>
+        </div>
+        <img src="images/headshot.jpg" alt="Lizardo's professional headshot" height="168" width="168">
     </header>
-    <p class="address">Atlanta, GA | +1 (678) 908-1942 | lizardo.andres12@gmail.com</p>
+    <p class="address">Atlanta, GA &middot; lizardo.andres12@gmail.com &middot; (678) 908-1942</p>
     <p class="tagline">
-        Hi! I'm Lizardo, a junior computer science major at the Georgia Institute of Technology interested in 
-        performance engineering and low-level development/embedded systems.
+        Hello! My name is Lizardo, and I’m an undergrad Computer Science student at the Georgia Institute of Technology (May ’28) interested in low-level development 
+        and high-frequency trading. I started coding back in 2023 writing some simple Python terminal games and immediately realized my passion for software. Since 
+        then, I've completed two highly instructive Software Engineering internships (Uber, Google) and landed two undergraduate teaching assistant roles. My favorite 
+        part of programming and computer science in general is learning how technology we use everyday works at a deeper level and being able to explain it to others. 
+        Lately, I've been writing personal tools and projects using C++ in efforts to practice my performance engineering and optimization skills.
     </p>
 
     <hr>
 
-    <!-- edu section -->
-    <section>
-        <h2>Education</h2>
-        <dl>
-            <dt>Georgia Institute of Technology</dt>
-            <dd>GPA: 3.91/4.00</dd>
-
-            <dt>Bachelor of Science - Computer Science</dt>
-            <dd>May 2028</dd>
-        </dl>
-    </section>
-
-    <!-- hon/awards section -->
-    <section>
-        <h2>Honors and Awards</h2>
-        <dl>
-            <dt>President's List</dt>
-            <dd>May 2026</dd>
-
-            <dt>Zell Miller Scholarship</dt>
-            <dd>May 2023 - Present</dd>
-        </dl>
-    </section>
-
-    <!-- skills section -->
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>C++</li>
-            <li>Go</li>
-            <li>Python</li>
-            <li>Linux</li>
+    <!-- experience section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul class="timeline">
+            <li>
+                <span class="role-date">May 2027 &ndash; Aug 2027</span>
+                <h3>Software Engineer Intern <span class="role-org">&mdash; Hudson River Trading, New York, NY</span>
+                </h3>
+                <ul>
+                    <li>Incoming C++ software engineer intern for Summer 2027</li>
+                </ul>
+            </li>
+            <li>
+                <span class="role-date">Aug 2026 &ndash; Dec 2026</span>
+                <h3>Undergraduate Teaching Assistant <span class="role-org">&mdash; Georgia Institute of
+                        Technology, Atlanta, GA</span></h3>
+                <ul>
+                    <li>Incoming teaching assistant for CS2200, leading an in-person lab section, reviewing and
+                        debugging coding assignments written in C, and holding office hours on Computer Architecture
+                        and Operating Systems topics</li>
+                </ul>
+            </li>
+            <li>
+                <span class="role-date">May 2026 &ndash; Aug 2026</span>
+                <h3>Software Engineer Intern <span class="role-org">&mdash; Google, San Jose, CA</span></h3>
+                <ul>
+                    <li>Optimized a petabyte-scale garbage collection pipeline written in C++, reducing runtime from
+                        5 days to 1 day by leveraging access patterns that reduce network and disk IO bottlenecks and
+                        hyper-tuning parallelism to increase per-stage throughput</li>
+                    <li>Used job-level profiling tools to derive data-driven optimization insights, leading to an
+                        81% latency decrease for the row deletion stage by removing unneeded grouping logic</li>
+                    <li>Authored an 11-page design document diagnosing the root cause of garbage collector failure
+                        and arguing for a full pipeline redesign, unanimously approved by senior engineers and
+                        downstream consumer team leads</li>
+                </ul>
+            </li>
+            <li>
+                <span class="role-date">May 2025 &ndash; Aug 2025</span>
+                <h3>Software Engineer Intern <span class="role-org">&mdash; Uber, San Francisco, CA</span></h3>
+                <ul>
+                    <li>Architected and deployed a new high-throughput microservice from scratch in Go to serve
+                        stadium seat map data, handling 100,000+ requests per second via gRPC and in-memory caching
+                    </li>
+                    <li>Designed a data access layer that reduced P99 latency by 40% using the cache-aside pattern
+                        with Redis</li>
+                    <li>Built functional components for data processing infrastructure in Go, achieving a 17%
+                        average increase in pipeline throughput through object pooling that minimized GC jitter</li>
+                    <li>Engineered a Python ETL pipeline that saved over $1,000 in monthly cloud costs, transforming
+                        unstructured data into a new MySQL cluster</li>
+                </ul>
+            </li>
+            <li>
+                <span class="role-date">Jan 2024 &ndash; Dec 2024</span>
+                <h3>Undergraduate Teaching Assistant <span class="role-org">&mdash; Kennesaw State University,
+                        Marietta, GA</span></h3>
+                <ul>
+                    <li>Mentored 15 student groups through Object-Oriented Programming projects in Python, Java, and
+                        C++, resulting in a 92% project grade average through objective-based plans and code review
+                    </li>
+                    <li>Supported debugging for 300+ students across 5 lab sections, resulting in a 96% assignment
+                        grade average by teaching debugging technique alongside problem-solving intuition</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
-    <!-- leadership section -->
-    <section>
-        <h2>Leadership and Experience</h2>
-        <dl>
-            <dt>
-                Software Engineer Intern --
-                <a href="https://www.uber.com/us/en/careers/teams/engineering/">Uber Technologies Inc.</a>
-            </dt>
-            <dd>May 2025 -- Aug 2025</dd>
-
-            <dt>Undergraduate Teaching Assistant -- Kennesaw State University</dt>
-            <dd>Jan 2024 -- Dec 2024</dd>
-        </dl>
-    </section>
-
     <!-- projects section -->
-    <section>
+    <section id="projects">
         <h2>Projects</h2>
         <div class="three-col">
 
             <!-- proj 1 -->
             <div class="card">
-                <h3>Reverse Image Search</h3>
-                <img src="images/pytorch.jpg" alt="Pytorch logo" height="150">
+                <p class="stat">4M msgs/sec &middot; 50ns latency</p>
+                <h3>Market Data Feed Handler</h3>
                 <ul>
-                    <li>Built a reverse image search desktop app using Pytorch and the HuggingFace Transformers library
-                    </li>
-                    <li>Leveraged containerization and docker-compose to manage and build applets</li>
+                    <li>Engineered a low-latency market data processor in C++ using a multithreaded
+                        producer/consumer model with a lock-free SPSC queue</li>
+                    <li>Optimized memory layout for cache locality via contiguous allocation and zero-copy reads</li>
+                </ul>
+                <ul class="tags">
+                    <li>c++</li>
+                    <li>lock-free</li>
+                    <li>market data</li>
                 </ul>
             </div>
 
             <!-- proj 2 -->
             <div class="card">
-                <h3>Task Manager</h3>
-                <img src="images/go.png" alt="Go programming language logo" height="100">
+                <p class="stat">l1&ndash;main memory</p>
+                <h3>Hardware Benchmarks</h3>
                 <ul>
-                    <li>Created a task manager web app using Go for the backend</li>
-                    <li>Collaborated with front-end engineers to orchestrate system</li>
+                    <li>Built a hardware-specific memory benchmarking suite in C++ with GoogleBench to measure cache
+                        and RAM latency/throughput across L1, L2, L3, and main memory</li>
+                    <li>Implemented cache-line-aligned pointer-chasing benchmarks with randomized access patterns to
+                        approximate real cache-miss costs</li>
+                </ul>
+                <ul class="tags">
+                    <li>c++</li>
+                    <li>python</li>
+                    <li>linux</li>
                 </ul>
             </div>
 
             <!-- proj 3 -->
             <div class="card">
-                <h3>Hexdump CLI Tool</h3>
-                <img src="images/hexdump.png" alt="Command line interface with hexadecimal display" height="100">
+                <p class="stat">+16% pnl vs. rule-based</p>
+                <h3>Market-Making Agent</h3>
                 <ul>
-                    <li>Recreated the hexdump (xxd) CLI tool available on UNIX systems using C/C++</li>
-                    <li>Integrated support for all command line arguments available on the original program</li>
+                    <li>Built a market-making AI agent in Python using a Proximal Policy Optimization model trained
+                        with StableBaselines3 and ABIDES</li>
+                    <li>Outperformed rule-based market-making strategies in mean-reverting markets by 16% PnL as
+                        AI@GT's Financial AI Project Leader</li>
+                </ul>
+                <ul class="tags">
+                    <li>python</li>
+                    <li>reinforcement learning</li>
                 </ul>
             </div>
         </div>
+    </section>
+
+    <!-- education section -->
+    <section id="education">
+        <h2>Education</h2>
+        <dl>
+            <dt>Georgia Institute of Technology</dt>
+            <dd>May 2028</dd>
+
+            <dt>B.S. Computer Science &mdash; Intelligence &amp; Systems Architecture</dt>
+            <dd>GPA: 3.89/4.00</dd>
+        </dl>
+        <p class="section-note">Coursework: Operating Systems, Computer Architecture, Computer Networks, Data
+            Structures &amp; Algorithms. Organizations: AI@GT, Trading@GT, Colorstack.</p>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-group">
+            <h3>languages</h3>
+            <ul>
+                <li>C++</li>
+                <li>Go</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </div>
+        <div class="skill-group">
+            <h3>libraries</h3>
+            <ul>
+                <li>Abseil</li>
+                <li>GoogleTest</li>
+                <li>GoogleBench</li>
+                <li>Apache Beam</li>
+                <li>Unittest</li>
+                <li>OpenTelemetry</li>
+            </ul>
+        </div>
+        <div class="skill-group">
+            <h3>middleware</h3>
+            <ul>
+                <li>gRPC</li>
+                <li>SBE FIX</li>
+                <li>RabbitMQ</li>
+            </ul>
+        </div>
+        <div class="skill-group">
+            <h3>tools &amp; platforms</h3>
+            <ul>
+                <li>Git</li>
+                <li>Perf</li>
+                <li>Linux</li>
+                <li>CMake</li>
+                <li>Bazel</li>
+                <li>Vim</li>
+                <li>Docker</li>
+                <li>Clickhouse</li>
+                <li>MySQL</li>
+                <li>GCP</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- leadership section -->
+    <section id="leadership">
+        <h2>Honors &amp; Leadership</h2>
+        <dl>
+            <dt>Inside HRT &mdash; Hudson River Trading</dt>
+            <dd>May 2026</dd>
+        </dl>
+        <ul>
+            <li>Selected as one of nine students nationally for an exclusive 3-day immersive program on software
+                engineering in algorithmic trading systems, hosted at HRT's New York City headquarters</li>
+        </ul>
+        <dl>
+            <dt>AI@GT Financial AI Project Leader</dt>
+            <dd>Feb 2026 &ndash; Apr 2026</dd>
+        </dl>
+        <ul>
+            <li>Designed 3 financial AI project technical proposals, earning a $2,500 sponsorship from Jane Street by
+                outlining the business case, implementation details, and key risks for each pitch</li>
+        </ul>
+    </section>
+
+    <!-- additional section -->
+    <section id="beyond">
+        <h2>Beyond Work</h2>
+        <p class="section-note">English, Portuguese, Spanish &mdash; low-level programming, crypto trading,
+            competitive programming, futebol brasileiro, and body building, with a soft spot for classical music and
+            symphony orchestra.</p>
     </section>
 
     <!-- Footer -->
     <footer>
         &copy;
         <a href="contact.html">Lizardo Hernandez</a>
-        <a href="https://www.linkedin.com/in/lizardo-a-hern/" target="_blank">
+        <a href="https://www.linkedin.com/in/lizardo-a-hern/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/lizardo-andres12" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
         </a>
     </footer>
 </body>
